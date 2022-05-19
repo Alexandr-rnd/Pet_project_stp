@@ -1,6 +1,6 @@
-from pages.base_page import BasePage
-from pages.locators import LoginPageLocators
-from pages.locators import MainPageLocators
+from objects_pege.base_page import BasePage
+from objects_pege.locators import LoginPageLocators
+from objects_pege.locators import MainPageLocators
 
 class LoginPage(BasePage):
     def should_be_login_page(self):
