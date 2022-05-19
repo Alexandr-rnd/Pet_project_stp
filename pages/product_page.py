@@ -1,5 +1,5 @@
-from objects_pege.locators import TestProductPagesLocators
-from objects_pege.base_page import BasePage
+from pages.locators import TestProductPagesLocators
+from pages.base_page import BasePage
 
 
 class TestProductPages(BasePage):

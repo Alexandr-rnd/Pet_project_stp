@@ -1,9 +1,9 @@
 import time
 
 import pytest
-from objects_pege.bascket_page import BascketPage
-from objects_pege.product_page import TestProductPages
-from objects_pege.login_page import LoginPage
+from pages.bascket_page import BascketPage
+from pages.product_page import TestProductPages
+from pages.login_page import LoginPage
 
 
 @pytest.mark.login_guest

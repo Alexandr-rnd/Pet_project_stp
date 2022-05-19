@@ -1,5 +1,5 @@
-from objects_pege.base_page import BasePage
-from objects_pege.locators import CartPageVar
+from pages.base_page import BasePage
+from pages.locators import CartPageVar
 
 
 class BascketPage(BasePage):

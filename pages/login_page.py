@@ -1,6 +1,6 @@
-from objects_pege.base_page import BasePage
-from objects_pege.locators import LoginPageVar
-from objects_pege.locators import BasePageVar
+from pages.base_page import BasePage
+from pages.locators import LoginPageVar
+from pages.locators import BasePageVar
 from faker import Faker
 
 

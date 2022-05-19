@@ -1,6 +1,6 @@
-from objects_pege.main_page import MainPage
-from objects_pege.login_page import LoginPage
-from objects_pege.bascket_page import BascketPage
+from pages.main_page import MainPage
+from pages.login_page import LoginPage
+from pages.bascket_page import BascketPage
 
 LINK = "http://selenium1py.pythonanywhere.com"
 

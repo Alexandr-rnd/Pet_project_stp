@@ -4,7 +4,7 @@ import math
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
-from objects_pege.locators import BasePageVar
+from pages.locators import BasePageVar
 
 
 class BasePage:
