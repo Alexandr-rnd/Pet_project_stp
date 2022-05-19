@@ -1,6 +1,7 @@
 from objects_pege.locators import TestProductPagesLocators
 from objects_pege.base_page import BasePage
 
+
 class TestProductPages(BasePage):
     def press_button_add_to_basket(self):
         login_link = self.browser.find_element(*TestProductPagesLocators.ADD_PRODUCT)
@@ -17,7 +18,9 @@ class TestProductPages(BasePage):
         assert product_price == message_basket_total, "Total price not true"
 
     def should_not_be_success_message(self):
-        assert self.is_not_element_present(*TestProductPagesLocators.MESSAGE_ADD), "Success message is presented, but should not be"
+        assert self.is_not_element_present(
+            *TestProductPagesLocators.MESSAGE_ADD), "Success message is presented, but should not be"
 
     def should_not_be_is_disappeared(self):
-        assert self.is_disappeared(*TestProductPagesLocators.MESSAGE_ADD), "Success message is presented, but should not be"
+        assert self.is_disappeared(
+            *TestProductPagesLocators.MESSAGE_ADD), "Success message is presented, but should not be"

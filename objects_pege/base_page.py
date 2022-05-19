@@ -8,7 +8,7 @@ from objects_pege.locators import BasePageVar
 
 class BasePage:
 
-    def __init__(self, browser, url,):
+    def __init__(self, browser, url):
         self.browser = browser
         self.url = url
         # self.browser.implicitly_wait(timeout)
@@ -61,4 +61,8 @@ class BasePage:
 
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageVar.LOGIN_LINK), "Login link is not presented"
+
+    def go_to_cart(self):
+        link = self.browser.find_element(*BasePageVar.CART_BUTTON)
+        link.click()
 

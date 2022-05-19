@@ -1,4 +1,6 @@
 import pytest
+
+from objects_pege.bascket_page import BascketPage
 from objects_pege.product_page import TestProductPages
 from objects_pege.login_page import LoginPage
 
@@ -62,3 +64,12 @@ def test_guest_can_add_product_to_cart(browser, link):
     page.solve_quiz_and_get_code()
     page.should_be_message_about_adding()
     page.should_be_message_basket_total()
+
+def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
+    link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
+    page = TestProductPages(browser, link)
+    page.open()
+    page.go_to_cart()
+    cart_page = BascketPage(browser, browser.current_url)
+    cart_page.in_cart_should_not_product()
+    cart_page.in_cart_should_not_present_some_product()

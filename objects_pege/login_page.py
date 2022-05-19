@@ -2,6 +2,7 @@ from objects_pege.base_page import BasePage
 from objects_pege.locators import LoginPageVar
 from objects_pege.locators import BasePageVar
 
+
 class LoginPage(BasePage):
     def should_be_login_page(self):
         self.should_be_login_url()
