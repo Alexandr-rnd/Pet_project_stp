@@ -3,6 +3,7 @@ from selenium.common.exceptions import NoAlertPresentException
 import math
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
+
 from objects_pege.locators import BasePageVar
 
 
@@ -66,3 +67,6 @@ class BasePage:
         link = self.browser.find_element(*BasePageVar.CART_BUTTON)
         link.click()
 
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageVar.USER_ICON), "User icon is not presented," \
+                                                                " probably unauthorised user"
